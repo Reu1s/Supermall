@@ -12,6 +12,7 @@
   font-size: 15px;
   display: flex;
   text-align: center;
+  z-index: 9;
 }
 .itemspan {
   flex: 1;
@@ -26,7 +27,8 @@
 export default {
   methods:{
     itemclick(index){
-      this.currentindex=index
+      this.currentindex=index;
+      this.$emit('tabclick',index)
     }
   },
   props: {
